@@ -2,16 +2,14 @@ package com.thiyagu_7.adventofcode.year2019.day1;
 
 import org.junit.Test;
 
-import java.io.IOException;
-import java.net.URISyntaxException;
-import java.nio.file.Files;
-import java.nio.file.Paths;
 import java.util.Collections;
-import java.util.List;
 
+import static com.thiyagu_7.adventofcode.FileUtils.readFile;
 import static org.junit.Assert.assertEquals;
 
 public class SolutionDay1Test {
+    private static final String FILE_PATH = "/year2019/day1/input.txt";
+
     private SolutionDay1 solutionDay1 = new SolutionDay1();
 
     @Test
@@ -31,7 +29,7 @@ public class SolutionDay1Test {
 
     @Test
     public void test_part1() {
-        assertEquals(3393938, solutionDay1.part1(readInputFile()));
+        assertEquals(3393938, solutionDay1.part1(readFile(FILE_PATH)));
     }
 
     @Test
@@ -46,16 +44,7 @@ public class SolutionDay1Test {
 
     @Test
     public void test_part2() {
-        assertEquals(5088037, solutionDay1.part2(readInputFile()));
+        assertEquals(5088037, solutionDay1.part2(readFile(FILE_PATH)));
     }
 
-    private List<String> readInputFile() {
-        try {
-            return Files.readAllLines(Paths.get(getClass()
-                    .getResource("/year2019/day1/input.txt")
-                    .toURI()));
-        } catch (URISyntaxException | IOException e) {
-            throw new RuntimeException(e);
-        }
-    }
 }
