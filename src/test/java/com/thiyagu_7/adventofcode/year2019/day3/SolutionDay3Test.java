@@ -30,5 +30,4 @@ public class SolutionDay3Test {
         List<String> lines = FileUtils.readFile(FILE_PATH);
         assertEquals(1674, solutionDay3.part1(lines.get(0), lines.get(1)));
     }
-
 }
