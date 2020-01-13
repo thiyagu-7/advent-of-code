@@ -96,8 +96,7 @@ public class SolutionDay5Test {
 
     @Test
     public void test_part2() {
-        //assertEquals(Arrays.asList(0, 0, 0, 0, 0, 0, 0, 0, 0, 6761139), solutionDay5.part1(getInputs()));
-        System.out.println(solutionDay5.part2(getInputs(), 5));
+        assertEquals(Collections.singletonList(9217546), solutionDay5.part2(getInputs(), 5));
     }
 
     private int[] getInputs() {
